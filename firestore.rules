@@ -1,0 +1,117 @@
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// Collection: users
+// Document ID: {userId}
+// Fields:
+//   - uid: string (required) - The unique identifier for the user.
+//   - displayName: string (optional) - The user's display name.
+//   - email: string (required, email) - The user's email address.
+//   - photoURL: string (optional) - URL to the user's profile picture.
+//   - createdAt: timestamp (optional) - When the profile was created.
+//
+// Collection: itineraries
+// Document ID: {itineraryId}
+// Fields:
+//   - userId: string (required) - The ID of the user who owns this itinerary.
+//   - destination: string (required) - The destination of the trip.
+//   - duration: number (required) - Length of the trip in days.
+//   - preferences: map (optional) - The preferences used to generate the itinerary.
+//   - plan: list (required) - The day-by-day plan.
+//   - imageUrl: string (optional) - Generated image for the destination.
+//   - createdAt: timestamp (optional) - When the itinerary was generated.
+//
+// Collection: chats/{userId}/messages
+// Document ID: {messageId}
+// Fields:
+//   - userId: string (required) - The ID of the user.
+//   - text: string (required) - The message text.
+//   - sender: string (required, enum: ['user', 'bot']) - Who sent the message.
+//   - timestamp: timestamp (optional) - When the message was sent.
+//
+// ===============================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isDocOwner() {
+      return isAuthenticated() && request.auth.uid == resource.data.userId;
+    }
+    
+    function isValidEmail(email) {
+      return email is string && email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+          (request.auth.token.email == "prakhar.sharmaibcp@gmail.com" && request.auth.token.email_verified == true));
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidUser(data) {
+      return data.keys().hasOnly(['uid', 'displayName', 'email', 'photoURL', 'createdAt', 'role']) &&
+             data.uid is string && data.uid.size() > 0 &&
+             data.email is string && isValidEmail(data.email) &&
+             (!('displayName' in data) || (data.displayName is string && data.displayName.size() < 100)) &&
+             (!('photoURL' in data) || (data.photoURL is string && data.photoURL.size() < 500));
+    }
+
+    function isValidItinerary(data) {
+      return data.keys().hasAll(['userId', 'destination', 'plan']) &&
+             data.userId is string && data.userId == request.auth.uid &&
+             data.destination is string && data.destination.size() > 0 && data.destination.size() < 200 &&
+             data.plan is list && data.plan.size() <= 30;
+    }
+
+    function isValidMessage(data) {
+      return data.keys().hasAll(['userId', 'text', 'sender']) &&
+             data.userId is string && data.userId == request.auth.uid &&
+             data.text is string && data.text.size() > 0 && data.text.size() < 5000 &&
+             data.sender in ['user', 'bot'];
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isOwner(userId) && isValidUser(request.resource.data) && (request.resource.data.role == 'user' || isAdmin());
+      allow update: if isOwner(userId) && isValidUser(request.resource.data) && (request.resource.data.role == resource.data.role || isAdmin());
+    }
+
+    match /itineraries/{itineraryId} {
+      allow read: if isDocOwner() || isAdmin();
+      allow create: if isAuthenticated() && isValidItinerary(request.resource.data);
+      allow update: if isDocOwner() && isValidItinerary(request.resource.data) && request.resource.data.userId == resource.data.userId;
+      allow delete: if isDocOwner() || isAdmin();
+    }
+
+    match /chats/{userId}/messages/{messageId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isOwner(userId) && isValidMessage(request.resource.data);
+      allow update, delete: if false; // Messages are immutable
+    }
+
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}
