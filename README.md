@@ -222,28 +222,6 @@ This helps travelers discover **meaningful cultural destinations and engage more
 
 ---
 
-# 📷 Application Screenshots
-
-### Login Page
-<img src="screenshots/login.png" width="800">
-
-### Home Page
-<img src="screenshots/home.png" width="800">
-
-### Trip Planner
-<img src="screenshots/trip-planner.png" width="800">
-
-### Smart Recommendations
-<img src="screenshots/recommendations.png" width="800">
-
-### Travel Toolbox
-<img src="screenshots/toolbox.png" width="800">
-
-### AI Chatbot
-<img src="screenshots/chatbot.png" width="800">
-
----
-
 # ⭐ Support
 
 If you like this project, consider **starring the repository** ⭐ on GitHub.
