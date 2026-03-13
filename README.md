@@ -1,5 +1,6 @@
 AI Cultural Tourism Insights & Engagement Platform
 
+An 
 AI-powered platform that generates personalized cultural travel recommendations and itineraries using Generative AI and Google AI Studio (Gemini AI).
 
 This project demonstrates how Artificial Intelligence can improve tourism planning by helping travelers discover cultural destinations based on their interests, goals, and travel preferences.
@@ -17,6 +18,8 @@ https://github.com/prakharsharma-cpu/Capstone-Project-finals.-Cultural-AI
 
 AI Studio App:
 https://ai.studio/apps/de13602c-2c70-435d-a4ed-5b4679976c87?fullscreenApplet=true
+
+
 
 Project Overview
 
