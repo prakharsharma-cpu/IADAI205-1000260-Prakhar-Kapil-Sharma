@@ -192,35 +192,6 @@ The project will be evaluated based on:
 
 ---
 
-# 🖼 Application Screenshots
-
-### Login Page
-<p align="center">
-<img src="screenshots/login.png" width="800">
-</p>
-
-### Home Page
-<p align="center">
-<img src="screenshots/home.png" width="800">
-</p>
-
-### Trip Planner
-<p align="center">
-<img src="screenshots/planner.png" width="800">
-</p>
-
-### Smart Recommendations
-<p align="center">
-<img src="screenshots/recommendations.png" width="800">
-</p>
-
-### AI Chatbot
-<p align="center">
-<img src="screenshots/chatbot.png" width="800">
-</p>
-
----
-
 # 👨‍💻 Author
 
 **Prakhar Sharma**  
