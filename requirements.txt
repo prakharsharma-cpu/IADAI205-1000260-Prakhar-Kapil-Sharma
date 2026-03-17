@@ -1,0 +1,30 @@
+# ╔══════════════════════════════════════════════════════════╗
+# ║   Cultural AI Travel — Python Dependencies               ║
+# ║   Install: pip install -r requirements.txt               ║
+# ╚══════════════════════════════════════════════════════════╝
+
+# ── Core Framework ──────────────────────────────────────────
+streamlit>=1.35.0               # Main UI framework
+
+# ── Google Gemini AI ────────────────────────────────────────
+google-genai>=1.16.0            # Official Google Generative AI SDK
+#   Provides: gemini-2.0-flash text/vision, Imagen image gen,
+#             Gemini TTS, Veo video generation
+
+# ── PDF Export ──────────────────────────────────────────────
+fpdf2>=2.7.9                    # PDF generation for itinerary export
+
+# ── Text-to-Speech ──────────────────────────────────────────
+gTTS>=2.5.3                     # Google Text-to-Speech for voice translator
+
+# ── Image Processing ────────────────────────────────────────
+Pillow>=10.4.0                  # Image handling for Imagen output
+
+# ── Markdown Rendering ──────────────────────────────────────
+markdown>=3.6                   # Render AI markdown output as HTML
+
+# ── HTTP / Networking ───────────────────────────────────────
+requests>=2.32.0                # HTTP requests (used by google-genai)
+
+# ── Utilities ───────────────────────────────────────────────
+python-dotenv>=1.0.1            # Load .env for local development
