@@ -27,7 +27,7 @@ Discover cultural destinations based on your interests, travel goals, and prefer
 **School:** Ryan Global School, Kharghar  
 
 🔗 **GitHub Repository**  
-https://github.com/prakharsharma-cpu/Capstone-Project-finals.-Cultural-AI  
+https://github.com/prakharsharma-cpu/IADAI205-1000260-Prakhar-Kapil-Sharma
 
 🚀 **Live AI App**  
 https://ai.studio/apps/de13602c-2c70-435d-a4ed-5b4679976c87?fullscreenApplet=true
