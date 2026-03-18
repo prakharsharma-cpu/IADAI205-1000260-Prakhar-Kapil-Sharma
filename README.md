@@ -9,219 +9,237 @@
 <h1 align="center">🌏 AI Cultural Tourism Insights & Engagement Platform</h1>
 
 <h3 align="center">
-An AI-powered platform that generates personalized cultural travel recommendations and itineraries using Generative AI.
+AI-powered system generating personalized cultural travel recommendations and itineraries using Generative AI
 </h3>
 
 <p align="center">
-Discover cultural destinations based on your interests, travel goals, and preferences.
+Explore meaningful cultural destinations tailored to your interests, travel style, and goals.
 </p>
 
 ---
 
 # 📌 Project Information
 
-**Name:** Prakhar Sharma  
-**Candidate Registration Number:** 1000260  
-**CRS:** Artificial Intelligence  
-**Course:** Capstone Project Y2  
-**School:** Ryan Global School, Kharghar  
+- **Name:** Prakhar Sharma  
+- **CRN:** 1000260  
+- **CRS:** Artificial Intelligence  
+- **Course:** Capstone Project Y2  
+- **School:** Ryan Global School, Kharghar  
 
 🔗 **GitHub Repository**  
-https://github.com/prakharsharma-cpu/IADAI205-1000260-Prakhar-Kapil-Sharma
+https://github.com/prakharsharma-cpu/IADAI205-1000260-Prakhar-Kapil-Sharma  
 
-🚀 **Live AI App**  
-https://ai.studio/apps/de13602c-2c70-435d-a4ed-5b4679976c87?fullscreenApplet=true
+🚀 **Live Application**  
+https://ai.studio/apps/de13602c-2c70-435d-a4ed-5b4679976c87?fullscreenApplet=true  
+
+📄 **PRD Document (PDF)**  
+[Download PRD](./IDAI205_1000260_Prakhar%20Sharma_AI%20Cultural%20Tourism%20Insights%20%26%20Engagement%20Platform.pdf)
 
 ---
 
 # 🌍 Project Overview
 
-Traditional travel platforms usually recommend destinations based on **popularity rather than personal cultural interests**.
+Traditional travel platforms rely on **popularity-based recommendations**, often ignoring deep cultural interests.
 
-However, many travelers want to explore experiences such as:
+This project introduces an **AI-driven cultural tourism platform** that:
 
-🏛 Historical monuments  
-🎉 Cultural festivals  
-🖼 Museums and art galleries  
-🏺 Heritage sites  
-🎭 Local traditions  
+- Understands user preferences
+- Generates personalized travel plans
+- Provides cultural insights and context
 
-Finding these experiences often requires searching across multiple travel platforms.
-
-This project solves that problem using **Artificial Intelligence and Generative AI** to analyze user preferences and generate **personalized cultural travel recommendations and itineraries**.
+💡 Built using **Generative AI (Gemini AI)** instead of traditional ML models.
 
 ---
 
 # 🎯 Objectives
 
-- Build an **AI-powered cultural tourism recommendation system**
-- Generate **personalized travel itineraries using Generative AI**
-- Create an **interactive cultural travel exploration platform**
-- Provide **AI-generated cultural insights for travelers**
-- Demonstrate the use of **modern AI tools in tourism planning**
+- Develop AI-powered recommendation system  
+- Generate personalized travel itineraries  
+- Deliver cultural insights using AI  
+- Build an interactive user experience  
+- Demonstrate real-world AI application  
 
 ---
 
-# ✨ Key Features
+# ✨ Features
 
-### 👤 User Preference Module
-
-Collects traveler inputs such as:
-
-- Cultural interests
-- Travel goals
-- Budget
-- Travel duration
+### 👤 User Preference Input
+- Cultural interests  
+- Budget  
+- Travel duration  
+- Travel goals  
 
 ---
 
-### 🧠 Cultural Recommendation Engine
-
-Uses **AI algorithms** to match user preferences with suitable cultural destinations.
-
----
-
-### 🗺 AI Itinerary Generator
-
-Generates a **personalized travel schedule** based on user interests.
+### 🧠 AI Recommendation Engine
+- Matches preferences with destinations  
+- Uses prompt-engineered AI logic  
 
 ---
 
-### 📚 Cultural Insights Generator
-
-Provides **AI-generated information and cultural insights** about destinations.
-
----
-
-# 👥 Stakeholders
-
-### 🧳 Travelers
-Discover cultural destinations tailored to their interests.
-
-### 🏛 Tourism Organizations
-Promote heritage sites and cultural experiences.
-
-### ✈ Travel Agencies
-Use AI insights to design smarter travel packages.
+### 🗺 Smart Itinerary Generator
+- Day-wise travel planning  
+- Personalized schedules  
 
 ---
 
-# 🛠 Tools & Technologies
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/Google%20AI%20Studio-AI%20Development-blue?style=for-the-badge&logo=googlecloud"/>
-
-<img src="https://img.shields.io/badge/Gemini%20AI-Generative%20AI-purple?style=for-the-badge&logo=google"/>
-
-</p>
-
-| Tool | Purpose |
-|-----|-----|
-| **Google AI Studio** | Cloud-based environment for building and testing AI applications |
-| **Gemini AI** | Multi-modal AI model used to generate recommendations |
+### 📚 Cultural Insights Engine
+- Historical context  
+- Traditions & heritage  
+- Local experiences  
 
 ---
 
-# ⚙ AI Workflow
+### 💬 Smart AI Chatbot (Aria)
+- Interactive travel assistance  
+- Real-time Q&A support  
 
+---
+
+# 🛠 Technologies Used
+
+| Technology | Purpose |
+|----------|--------|
+| **Google AI Studio** | AI development & deployment |
+| **Gemini AI** | Generative AI engine |
+| **Prompt Engineering** | Core AI logic |
+| **Frontend UI** | User interaction |
+
+---
 
 User Input
 ↓
 Preference Analysis
 ↓
+Prompt Engineering
+↓
 Gemini AI Processing
 ↓
-Destination Recommendations
-↓
-Personalized Travel Itinerary
+Recommendations + Itinerary
 ↓
 Cultural Insights Display
 
 
-### Step 1 — User Input
-User enters:
-
-- interests  
-- travel goals  
-- travel duration  
-- budget  
-
-### Step 2 — AI Processing
-Data is sent to **Google AI Studio**, where **Gemini AI analyzes user preferences**.
-
-### Step 3 — Recommendation Generation
-Gemini identifies cultural destinations matching the user's interests.
-
-### Step 4 — Itinerary Creation
-AI generates a **personalized travel plan**.
-
-### Step 5 — Results Display
-Platform displays:
-
-- destination recommendations  
-- cultural insights  
-- travel itinerary  
-
 ---
 
-# 📅 Development Timeline
+# 🚀 Installation Instructions
 
-| Week | Development Stage |
-|-----|----------------|
-| Week 1 | Project research |
-| Week 2 | Data collection |
-| Week 3 | Data preparation |
-| Week 4 | AI model design |
-| Week 5 | Gemini AI integration |
-| Week 6 | User preference module |
-| Week 7 | Cultural insights generator |
-| Week 8 | Interface development |
-| Week 9 | Testing & optimization |
-| Week 10 | Final integration |
+### 1. Clone Repository
+```bash
+git clone https://github.com/prakharsharma-cpu/IADAI205-1000260-Prakhar-Kapil-Sharma.git
 
----
+2. Open Project
 
-# ⚠ Risk Management
+Open in browser / local environment
 
-### AI Recommendation Accuracy
-AI may generate irrelevant suggestions.
+Or run via Google AI Studio
 
-**Solution:** Improve prompts and refine user inputs.
+3. Setup API (if needed)
 
-### Data Availability
-Limited tourism data may reduce recommendation quality.
+Add Gemini API Key in environment/config
 
-**Solution:** Use open cultural tourism datasets.
+▶️ Usage Instructions
 
-### External AI Dependency
-Reliance on Gemini AI services.
+Open the application
 
-**Solution:** Optimize prompts and store generated responses.
+Enter travel preferences:
 
----
+Interests
 
-# 📊 Evaluation Criteria
+Budget
 
-The project will be evaluated based on:
+Duration
 
-✔ Innovation in AI tourism applications  
-✔ Technical implementation of Gemini AI  
-✔ Usability of the platform  
-✔ Cultural tourism impact  
+Submit input
 
----
+View:
 
-# 🧾 Conclusion
+AI recommendations
 
-The **AI Cultural Tourism Insights & Engagement Platform** demonstrates how **Artificial Intelligence can transform tourism planning**.
+Travel itinerary
 
-Using **Google AI Studio and Gemini AI**, the system analyzes user preferences and generates **intelligent cultural travel recommendations and itineraries**.
+Cultural insights
 
-This helps travelers discover **meaningful cultural destinations and engage more deeply with global heritage**.
+📸 Screenshots / Demo
+🧾 Login Page
 
----
+🏠 Dashboard
 
-# ⭐ Support
+🗺 Trip Planner
 
-If you like this project, consider **starring the repository** ⭐ on GitHub.
+🤖 Smart Recommendation
+
+💬 AI Chatbot (Aria)
+
+📊 Evaluation Metrics
+
+⏱ Response Time ≤ 5 seconds
+
+🎯 Recommendation Accuracy ≥ 80%
+
+📦 Structured Output: 100%
+
+⚙ System Stability ≥ 95%
+
+⚠️ Limitations
+
+No real-time data integration
+
+Dependent on prompt quality
+
+No feedback learning loop
+
+🔮 Future Improvements
+
+API integration (flights, hotels)
+
+Real-time travel data
+
+Reinforcement learning personalization
+
+Smart recommendation evolution
+
+🤝 Contribution Guidelines
+
+Contributions are welcome!
+
+Steps:
+
+Fork the repository
+
+Create a new branch
+
+Make changes
+
+Submit a Pull Request
+
+🙌 Acknowledgments
+
+Google AI Studio
+
+Gemini AI
+
+Open cultural datasets
+
+Academic guidance & research
+
+⭐ Support
+
+If you found this project useful:
+
+👉 Star the repository
+👉 Share with others
+
+📌 Conclusion
+
+This project demonstrates how Generative AI can transform tourism by:
+
+Moving from static → dynamic recommendations
+
+Enhancing personalization
+
+Promoting cultural exploration
+
+🚀 A step towards intelligent travel planning systems
+
+# ⚙️ System Workflow
